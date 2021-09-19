@@ -1,0 +1,1 @@
+<img src="/local/templates/predgorie/images/logo.svg" alt="logo">

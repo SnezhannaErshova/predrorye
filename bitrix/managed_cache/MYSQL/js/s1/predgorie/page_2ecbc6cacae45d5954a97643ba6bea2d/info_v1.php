@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/predgorie/components/bitrix/system.pagenavigation/show_more/script.js" => "16293718301161",]; ?>

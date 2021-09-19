@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/local/templates/predgorie/fonts/fonts.css"/>
+        <link href="/local/templates/predgorie/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Keywords" />
+<meta name="description" content="Description" />
+<link href="/bitrix/js/main/core/css/core.min.css?16293718032854" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" data-skip-moving="true">(function(w, d) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','storageBlocks':[],'dynamicBlocks':{'LkGdQn':'3a189e1b5d82','XEVOpk':'3a189e1b5d82','g8taYv':'3a189e1b5d82','SqNGa6':'97d911e6dbc8'},'AUTO_UPDATE':true,'AUTO_UPDATE_TTL':'120'};var inv = false;if (v.AUTO_UPDATE === false){if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0){var lm = Date.parse(d.lastModified);if (!isNaN(lm)){var td = new Date().getTime();if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td){w.frameRequestStart = false;w.preventAutoUpdate = true;return;}inv = true;}}else{w.frameRequestStart = false;w.preventAutoUpdate = true;return;}}var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("X-Bitrix-Composite", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");if (inv){r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");}try { r.setRequestHeader("BX-REF", d.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}else{w.frameRequestFail = f;}return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();})(window, document);</script>
+
+
+<link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.min.css?16293718071861" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/popup/dist/main.popup.bundle.min.css?162937180323520" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/predgorie/page_502fa52dcd52917db00c3ac9ca79ef3c/page_502fa52dcd52917db00c3ac9ca79ef3c_v1.css?1631013686369" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/predgorie/template_c58eae46c05e8d6d1107980325671b43/template_c58eae46c05e8d6d1107980325671b43_v1.css?163101356877311" type="text/css"  data-template-style="true" rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.min.js?1629371803252095"></script>
+
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+BX.setCSSList(['/bitrix/js/main/core/css/core.css','/bitrix/js/main/lazyload/dist/lazyload.bundle.css','/bitrix/js/main/parambag/dist/parambag.bundle.css']);</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/'});</script>
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/predgorie/kernel_main/kernel_main_v1.js?1631013568152481"></script>
+<script type="text/javascript"  src="/bitrix/cache/js/s1/predgorie/kernel_main_polyfill_customevent/kernel_main_polyfill_customevent_v1.js?16310135681051"></script>
+<script type="text/javascript" src="/bitrix/js/ui/dexie/dist/dexie.bitrix.bundle.min.js?162937180760291"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.min.js?16293718037365"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?162937180310532"></script>
+<script type="text/javascript" src="/bitrix/js/main/popup/dist/main.popup.bundle.min.js?162937180358529"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-3.3.1.min.min.js?162937180386873"></script>
+<script type="text/javascript" src="/bitrix/js/altasib.feedback/jquery.maskedinput/jquery.maskedinput.min.js?16293718064312"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core_fx.js','/bitrix/js/main/session.js','/bitrix/js/main/pageobject/pageobject.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/date/main.date.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/utils.js','/bitrix/js/main/polyfill/customevent/main.polyfill.customevent.js','/local/templates/predgorie/components/altasib/feedback.form/send_question/form_script.js']);</script>
+<script type="text/javascript">BX.setCSSList(['/local/templates/predgorie/components/bitrix/news.detail/page-about/style.css','/bitrix/templates/.default/components/bitrix/menu/main_menu/style.css','/local/templates/predgorie/components/altasib/feedback.form/send_question/form_style.css','/local/templates/predgorie/components/altasib/feedback.form/send_question/themes/theme_39befb7916e171b8e0109f1c26016157.css','/local/templates/predgorie/styles.css']);</script>
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/predgorie/template_a659d68e3aafb1108152885b907c33cc/template_a659d68e3aafb1108152885b907c33cc_v1.js?16310135689903"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "e77070515ca3dd5911980082f6811c65"]); _ba.push(["host", "predgorye.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+		<title>О компании | Предгорье</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            jQuery(window).load(function(){
+                (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                ym(84583888, "init", {
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-TFG1YSS4S7');
+                var script = document.createElement("script");
+                script.src = "https://www.googletagmanager.com/gtag/js?id=G-TFG1YSS4S7";
+                script.type = "text/javascript";
+                document.getElementsByTagName("body")[0].appendChild(script);
+            })
+
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/84583888" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+	</head>
+	<body>
+		<div id="panel">
+					</div>
+        <header>
+          <div class="container flex-c-sb">
+            <div class="logo">
+                <a href="/">
+                  <img src="/local/templates/predgorie/images/logo.svg" alt="logo">                </a>
+
+            </div>
+            <div class="header-right flex-c">
+                <div class="nav">
+                  <div id="bxdynamic_LkGdQn_start" style="display:none"></div>
+<ul class="main-menu">
+
+			<li><a href="/products/">Продукция</a></li>
+		
+			<li><a href="/o-kompanii/" class="selected">О компании</a></li>
+		
+			<li><a href="/stat-partnerom/">Стать партнером</a></li>
+		
+			<li><a href="/novosti/">Новости</a></li>
+		
+			<li><a href="/kontakty/">Контакты</a></li>
+		
+
+</ul>
+<div id="bxdynamic_LkGdQn_end" style="display:none"></div>                </div>
+                <div class="info flex-c">
+                    <div class="language lang">
+                        <div class="lang-ru lang-item" data-google-lang="ru" class="language__img">
+<!--                            <img src="/local/templates/predgorie/images/ru.svg" alt="ru">-->
+                        </div>
+                        <div class="lang-en lang-item" data-google-lang="en" class="language__img">
+<!--                            <img src="/local/templates/predgorie/images/en.svg" alt="en">-->
+                        </div>
+                        <div class="lang-cn lang-item" data-google-lang="zh-CN" class="language__img">
+<!--                            <img src="/local/templates/predgorie/images/cn.svg" alt="cn">-->
+                        </div>
+<!--                        <div class="lang-active"></div>-->
+<!--                        <div class="lang-list">-->
+<!--                            <div class="lang-ru" data-google-lang="ru" class="language__img">-->
+<!--                                <img src="/local/templates/predgorie/images/RU.svg" alt="ru">-->
+<!--                            </div>-->
+<!--                            <div class="lang-en" data-google-lang="en" class="language__img">-->
+<!--                                <img src="/local/templates/predgorie/images/EN.svg" alt="en">-->
+<!--                            </div>-->
+<!--                            <div class="lang-cn" data-google-lang="zh-CN" class="language__img">-->
+<!--                                <img src="/local/templates/predgorie/images/CN.svg" alt="cn">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                    </div>
+                    <div class="contacts">
+                      <a href="tel:+79131813551" class="phone">+7 (913) 181-35-51</a>
+<a data-fancybox href="#modal" class="get-call">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-mobile">
+                <div class="menu-icon">
+                   <span></span>
+                </div>
+                <div class="mobile-menu">
+                  <div class="mobile-menu-wrap">
+                      <div class="contacts">
+                        <a href="tel:+79131813551" class="phone">+7 (913) 181-35-51</a>
+<a data-fancybox href="#modal" class="get-call">Оставить заявку</a>
+                      </div>
+                    <div id="bxdynamic_XEVOpk_start" style="display:none"></div>
+<ul class="main-menu">
+
+			<li><a href="/products/">Продукция</a></li>
+		
+			<li><a href="/o-kompanii/" class="selected">О компании</a></li>
+		
+			<li><a href="/stat-partnerom/">Стать партнером</a></li>
+		
+			<li><a href="/novosti/">Новости</a></li>
+		
+			<li><a href="/kontakty/">Контакты</a></li>
+		
+
+</ul>
+<div id="bxdynamic_XEVOpk_end" style="display:none"></div>                  </div>
+
+                </div>
+            </div>
+          </div>
+        </header>
+	
+						<div class="page-about">
+	 
+<div class="page-header" style="background: url(/upload/iblock/c7c/c7cabe9313ed0ccb4f8c756b0162b88e.jpg) no-repeat 50% 50%/cover;">
+	<div class="container">
+		<div class="flex-c">
+			<a href="/">
+				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="24" cy="24" r="24" transform="rotate(-180 24 24)" fill="#90A4AE"/>
+					<rect x="26.7573" y="19.7574" width="8" height="2" rx="1" transform="rotate(135 26.7573 19.7574)" fill="white"/>
+					<rect x="25.3431" y="29.6569" width="8" height="2" rx="1" transform="rotate(-135 25.3431 29.6569)" fill="white"/>
+				</svg>
+			</a>
+			<h1>О компании</h1>
+		</div>
+	</div>
+</div> <!--CFile::GetArray()-->
+<div class="form-block main-p">
+    <div class="container flex-fs-fs">
+        <img src="/upload/iblock/e54/e54dfb00a9113cb5d747979e85aa20d3.png" alt="" class="form-block-bg">
+        <div class="form-block-item">
+          <h2>Наши ценности</h2>
+ Мы стремимся к постоянному сотрудничеству с клиентами. Доверие и общее стремление к лучшему результату нашей работы - вот что способствует развитию бизнеса. Мы всегда открыты для общения, в полной мере стараемся реализовывать Ваши предложения. <br>
+Точность и своевременность оформления документов, незамедлительная передача информации, быстрота действий гарантированы.        </div>
+    </div>
+</div>
+<div class="benefits main-p">
+  <div class="container flex">
+            <div class="benefit">
+            <img src="/upload/iblock/ec7/ec786b51babb2a000f592a84db955525.png" alt="">
+            <div class="text">Способствуем развитию экспортного направления на международной арене</div>
+        </div>
+            <div class="benefit">
+            <img src="/upload/iblock/eff/effb4d307f7137ce8858e15eeb327ce4.png" alt="">
+            <div class="text">Экспортируем в больших объемах</div>
+        </div>
+            <div class="benefit">
+            <img src="/upload/iblock/c0a/c0a37f30775afc7355c0af5d6f752dc8.png" alt="">
+            <div class="text">Тщательный контроль качества продукции</div>
+        </div>
+            <div class="benefit">
+            <img src="/upload/iblock/459/45955f3605b337dfdabe14db701f025f.png" alt="">
+            <div class="text">Быстрое решение возникающих вопросов</div>
+        </div>
+      </div>
+
+</div>
+<div class="desc">
+    <div class="container">
+      <p>
+	ООО «Предгорье КЯ» - торгово-экспортная компания сельскохозяйственной продукции , отправляющая зерновые культуры в КНР морским и железнодорожным путями.
+</p>
+ <img width="1024" alt="close-up-of-train-with-containers 1.jpg" src="/upload/medialibrary/c70/c700ccc2f5ef44abfbd31dbf6230cc5b.jpg" height="444" title="close-up-of-train-with-containers 1.jpg">
+<p>
+	Наша компания активно развивается на международном рынке с 2019 года. В данный момент сотрудничаем с крупными предприятиями по переработке зерновой продукции в России. Мы стремимся к постоянному сотрудничеству с партнёрами. Доверие и общее стремление к лучшему результату нашей работы - вот что способствует развитию бизнеса. Мы всегда открыты для общения, в полной мере стараемся реализовывать Ваши предложения. <br>
+	 За прошлый год было вывезено более 2,5 тыс. тонн продукции, в этом году планируется вывезти около 10 тыс., в следующем году увеличим объем до 20 тыс.
+</p>
+ <img width="1024" alt="vertical-multi-head-weigher-packaging-machine-snacks-and-chips-in-a-factory 1.jpg" src="/upload/medialibrary/c2d/c2db4db720bd898b56a913f9e266b906.jpg" height="444" title="vertical-multi-head-weigher-packaging-machine-snacks-and-chips-in-a-factory 1.jpg">    </div>
+</div>
+</div>
+<!--<div class="about-news main-p">-->
+<!--	<div class="container">-->
+<!--		<h2>Новости компании</h2>-->
+<!--		<div class="news-block">-->
+<!--			 --><!--		</div>-->
+<!-- <a href="/novosti/" class="main-btn">Смотреть все новости</a>-->
+<!--	</div>-->
+<!--</div>-->
+<footer>
+    <div class="footer-top">
+        <div class="container flex-c">
+            <a href="/" class="footer-logo">
+              <img src="/local/templates/predgorie/images/logo.svg" alt="logo">            </a>
+            <div class="footer-right">
+                <div class="footer-menu">
+                  <div id="bxdynamic_g8taYv_start" style="display:none"></div>
+<ul class="main-menu">
+
+			<li><a href="/products/">Продукция</a></li>
+		
+			<li><a href="/o-kompanii/" class="selected">О компании</a></li>
+		
+			<li><a href="/stat-partnerom/">Стать партнером</a></li>
+		
+			<li><a href="/novosti/">Новости</a></li>
+		
+			<li><a href="/kontakty/">Контакты</a></li>
+		
+
+</ul>
+<div id="bxdynamic_g8taYv_end" style="display:none"></div>                </div>
+                <div class="footer-socials flex-c">
+                  <a href="/" target="_blank" class="socials-item flex-c-c">
+  <img src="/local/templates/predgorie/images/facebook.svg" alt="">
+</a>
+<a href="https://www.instagram.com/predgorjekya/?utm_medium=copy_link" target="_blank" class="socials-item flex-c-c">
+  <img src="/local/templates/predgorie/images/instagram.svg" alt="">
+</a>
+<a href="/" target="_blank" class="socials-item flex-c-c">
+    <img src="/local/templates/predgorie/images/telegram.svg" alt="">
+</a>
+<a href="/" target="_blank" class="socials-item flex-c-c">
+    <img src="/local/templates/predgorie/images/viber.svg" alt="">
+</a>
+<a href="/" target="_blank" class="socials-item flex-c-c">
+    <img src="/local/templates/predgorie/images/whatsapp.svg" alt="">
+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container flex-c-sb">
+            <a href="/politika-konfidentsialnosti/" class="footer-policy">Политика конфиденциальности</a>
+            <a href="https://asmart-group.ru" target="_blank" class="create">Сайт разработан <span>IT-компанией Asmart</span></a>
+        </div>
+    </div>
+</footer>
+<!-- Modal -->
+<div id="modal" class="modal-wrap">
+    <div class="modal-header"></div>
+    <div class="modal-body">
+        <h2>Оставьте заявку</h2>
+        <div class="desc">Наш менеджер свяжется с вами в ближайшее время для уточнения деталей сотрудничества!</div>
+        <div class="item-form">
+          
+    <script type="text/javascript">
+        if (typeof ALXpopup_FID13== 'undefined' && typeof ALXpopup != 'undefined' && typeof BX != 'undefined')
+            var ALXpopup_FID13= BX.clone(ALXpopup);
+
+        $(document).ready(function () {
+            var param = {
+                'popupWindow': "N"
+            };
+
+            if (typeof ALXpopup_FID13!= 'undefined')
+                ALXpopup_FID13.init(param);
+            else
+                ALXpopup.init(param);
+        });
+    </script>
+    <div id="afbf_err_FID13" class="alx-feedb-error"></div>
+    <script type="text/javascript">
+        $(function ($) {
+            if (typeof $.mask != 'undefined') {
+                                $('input[name="FIELDS[phone_FID13]"]').mask("9 (999) 999-99-99", {placeholder: '_'});
+                            } else if (typeof console.warn != 'undefined') {
+                console.warn('Conflict when accessing the jQuery Mask Input Plugin: %s typeof $.mask', typeof $.mask);
+            }
+        });
+    </script>
+
+<script type="text/javascript">
+if(typeof ALX_ReloadCaptcha!='function'){
+	function ALX_ReloadCaptcha(csid,ALX){
+		document.getElementById("alx_cm_CAPTCHA_"+ALX).src='/bitrix/tools/captcha.php?captcha_sid='+csid+'&rnd='+Math.random();
+	}
+	function ALX_SetNameQuestion(obj,ALX){
+		var qw=obj.selectedIndex;
+		document.getElementById("type_question_name_"+ALX).value=obj.options[qw].text;
+			}
+}
+if(typeof ALX_ChangeCaptcha!='function'){
+	function ALX_ChangeCaptcha(ALX){
+		$.getJSON('/local/templates/predgorie/components/altasib/feedback.form/send_question/reload_captcha.php',function(data){
+			$('#alx_cm_CAPTCHA_'+ALX).attr('src','/bitrix/tools/captcha.php?captcha_sid='+data);
+			$('#alx_fb_captchaSid_'+ALX).val(data);
+		});
+	}
+}
+</script>
+    <div class="afbf alx_feed_back "
+         id="alx_feed_back_FID13">
+                        <div class="afbf_feedback_poles">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (typeof $.dropdown != 'undefined') {
+                $(".afbf_item_pole .afbf_select").dropdown({
+                    "dropdownClass": "feedback_dropdown"
+                });
+            }
+        });
+    </script>
+        <br>                    <form id="f_feedback_FID13" name="f_feedback_FID13" action="/o-kompanii/?ELEMENT_ID=18" method="post"
+          enctype="multipart/form-data">
+        <input type="hidden" name="FEEDBACK_FORM_FID13" value="Y"/>
+
+                        
+
+                    <input type="hidden" name="HREF_LINK_FID13"
+                   value="http://predgorye.ru/o-kompanii/?ELEMENT_ID=18"/>
+                                                                        <div id="afbf_name_fid13" class="afbf_item_pole required">
+                <div class="afbf_name">
+                    Имя <span
+                            class="afbf_required_text">*</span>                    <div class="afbf_hint"></div>
+                </div>
+                                                    <div class="afbf_inputtext_bg form-item" id="error_name_FID13">
+                                                    <input placeholder="Имя" type="text" size="40" id="name_FID131"
+                                   name="FIELDS[name_FID13]" value=""
+                                   class="afbf_inputtext"
+                                   onblur="if(this.value==''){this.value=''}"
+                                   onclick="if(this.value==''){this.value=''}"/>
+                        
+                                                    <div class="afbf_error_text">Это поле обязательно для заполнения</div>
+                                            </div>
+                                                </div>
+            
+                                <div id="afbf_phone_fid13" class="afbf_item_pole required">
+                <div class="afbf_name">
+                    Телефон <span
+                            class="afbf_required_text">*</span>                    <div class="afbf_hint"></div>
+                </div>
+                                                    <div class="afbf_inputtext_bg form-item" id="error_phone_FID13">
+                                                    <input placeholder="Телефон" type="text" size="40" id="phone_FID131"
+                                   name="FIELDS[phone_FID13]" value=""
+                                   class="afbf_inputtext"
+                                   onblur="if(this.value==''){this.value=''}"
+                                   onclick="if(this.value==''){this.value=''}"/>
+                        
+                                                    <div class="afbf_error_text">Это поле обязательно для заполнения</div>
+                                            </div>
+                                                </div>
+            
+                                    
+            
+            <div id="bxdynamic_SqNGa6_start" style="display:none"></div>loading... <img src="/bitrix/themes/.default/start_menu/main/loading.gif"><div id="bxdynamic_SqNGa6_end" style="display:none"></div>
+                                
+                    <label data-bx-user-consent="{&quot;id&quot;:1,&quot;sec&quot;:&quot;1877mo&quot;,&quot;autoSave&quot;:true,&quot;actionUrl&quot;:&quot;\/bitrix\/components\/bitrix\/main.userconsent.request\/ajax.php&quot;,&quot;replace&quot;:{&quot;button_caption&quot;:&quot;\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c&quot;,&quot;fields&quot;:[&quot;\u0418\u043c\u044f&quot;,&quot;\u0422\u0435\u043b\u0435\u0444\u043e\u043d&quot;,&quot;IP-\u0430\u0434\u0440\u0435\u0441&quot;],&quot;INPUT_LABEL&quot;:&quot;\u042f \u0441\u043e\u0433\u043b\u0430\u0441\u0435\u043d \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445&quot;},&quot;url&quot;:null}" class="main-user-consent-request">
+	<input type="checkbox" value="Y" checked name="alx_fb_agreement">
+	<a>Я согласен на обработку персональных данных</a>
+</label>
+<script type="text/html" data-bx-template="main-user-consent-request-loader">
+	<div class="main-user-consent-request-popup">
+		<div class="main-user-consent-request-popup-cont">
+			<div data-bx-head="" class="main-user-consent-request-popup-header"></div>
+			<div class="main-user-consent-request-popup-body">
+				<div data-bx-loader="" class="main-user-consent-request-loader">
+					<svg class="main-user-consent-request-circular" viewBox="25 25 50 50">
+						<circle class="main-user-consent-request-path" cx="50" cy="50" r="20" fill="none" stroke-width="1" stroke-miterlimit="10"></circle>
+					</svg>
+				</div>
+				<div data-bx-content="" class="main-user-consent-request-popup-content">
+					<div class="main-user-consent-request-popup-textarea-block">
+						<textarea data-bx-textarea="" class="main-user-consent-request-popup-text"></textarea>
+					</div>
+					<div class="main-user-consent-request-popup-buttons">
+						<span data-bx-btn-accept="" class="main-user-consent-request-popup-button main-user-consent-request-popup-button-acc">Y</span>
+						<span data-bx-btn-reject="" class="main-user-consent-request-popup-button main-user-consent-request-popup-button-rej">N</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>            <div class="afbf_error_text">Необходимо ваше согласие на обработку персональных данных</div>
+            <script>
+                BX.message({
+                    MAIN_USER_CONSENT_REQUEST_TITLE: 'Согласие пользователя',
+                    MAIN_USER_CONSENT_REQUEST_BTN_ACCEPT: 'Принимаю',
+                    MAIN_USER_CONSENT_REQUEST_BTN_REJECT: 'Не принимаю',
+                    MAIN_USER_CONSENT_REQUEST_LOADING: 'Загрузка..',
+                    MAIN_USER_CONSENT_REQUEST_ERR_TEXT_LOAD: 'Не удалось загрузить текст соглашения.'
+
+                });
+            </script>
+                    <script type="text/javascript" src="/local/templates/predgorie/components/altasib/feedback.form/send_question/bitrix/main.userconsent.request/altasib_fb/user_consent.js"></script>
+            <link href="/local/templates/predgorie/components/altasib/feedback.form/send_question/bitrix/main.userconsent.request/altasib_fb/user_consent.css" type="text/css" rel="stylesheet"/>
+
+                            <input type="hidden" name="sessid" id="sessid" value="" />        <div class="afbf_submit_block">
+            <input type="submit" class="fb_close afbf_btn main-btn" id="fb_close_FID13" name="SEND_FORM"
+                   value="Отправить"/>
+        </div>
+    </form>
+
+</div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var file_w_FID13 = parseInt($("#alx_feed_back_FID13 .afbf_feedback_poles").width() / 5);
+
+            function str_replace_FID13(search, replace, subject) {
+                return subject.split(search).join(replace);
+            }
+                    });
+    </script>
+            <style type="text/css">
+            #alx_feed_back_FID13.alx_feed_back,
+            #afbf_err_FID13.alx-feedb-error {
+                width: 100%;
+            }
+        </style>
+                    </div>
+    </div>
+</div>
+
+<script async src="/local/templates/predgorie/js/fancybox.umd.js"></script>
+<link rel="stylesheet" href="/local/templates/predgorie/css/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/local/templates/predgorie/css/fancybox.css"/>
+<script async src="/local/templates/predgorie/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="/local/templates/predgorie/js/swiper-bundle.min.js"></script>
+<script src="/local/templates/predgorie/js/select2.min.js"></script>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script async src="/local/templates/predgorie/js/google-translate.js"></script>
+<script async src="https://translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+<!--<script type="text/javascript">-->
+<!--    function googleTranslateElementInit() {-->
+<!--        new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');-->
+<!--    }-->
+<!--</script>-->
+<!---->
+<!--<script type="text/javascript">-->
+<!--    function googleTranslateElementInit() {-->
+<!--        new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'zh-CN,en,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');-->
+<!--    }-->
+<!--</script>-->
+<!---->
+<!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+<!--<script src="/local/templates/predgorie/js/google-translate.js"></script>-->
+<script src="/local/templates/predgorie/js/script.js"></script>
+</body>
+</html>
+<!--a35bb11fee7068884aaa5f01a43f94da-->

@@ -1,0 +1,131 @@
+<?
+	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+	$APPLICATION->SetTitle("Продукция");
+?><? $APPLICATION->IncludeFile("/include/second-page/header.php", Array(), Array("MODE" => "php"));?> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"catalog",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array("",""),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "Catalog",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array("DESC",""),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N"
+	)
+);?>
+<div class="bottom-form">
+	<div class="form-block main-p" style="background-image: url('/local/templates/predgorie/images/form-bg.jpg')">
+		<div class="container flex-fs-fs">
+			 <? $APPLICATION->IncludeFile("/include/main-page/bottom-form.php", Array(), Array("MODE" => "php"));?>
+			<div class="form-block-item">
+				<div class="item-form">
+					 <?$APPLICATION->IncludeComponent(
+	"altasib:feedback.form",
+	"send_question",
+	Array(
+		"ACTIVE_ELEMENT" => "Y",
+		"ADD_HREF_LINK" => "Y",
+		"ADD_LEAD" => "N",
+		"ALX_LINK_POPUP" => "N",
+		"BBC_MAIL" => "",
+		"CAPTCHA_TYPE" => "recaptchav3",
+		"CATEGORY_SELECT_NAME" => "Выберите категорию",
+		"CHANGE_CAPTCHA" => "N",
+		"CHECKBOX_TYPE" => "CHECKBOX",
+		"CHECK_ERROR" => "Y",
+		"COLOR_OTHER" => "#009688",
+		"COLOR_SCHEME" => "BRIGHT",
+		"COLOR_THEME" => "",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"EVENT_TYPE" => "ALX_FEEDBACK_FORM",
+		"FB_TEXT_NAME" => "",
+		"FB_TEXT_SOURCE" => "PREVIEW_TEXT",
+		"FORM_ID" => "1",
+		"IBLOCK_ID" => "11",
+		"IBLOCK_TYPE" => "altasib_feedback",
+		"INPUT_APPEARENCE" => array("DEFAULT"),
+		"JQUERY_EN" => "jquery3",
+		"LINK_SEND_MORE_TEXT" => "Отправить ещё одно сообщение",
+		"LOCAL_REDIRECT_ENABLE" => "N",
+		"MASKED_INPUT_PHONE" => array("phone"),
+		"MESSAGE_OK" => "Ваше сообщение было успешно отправлено",
+		"NAME_ELEMENT" => "ALX_DATE",
+		"NOT_CAPTCHA_AUTH" => "Y",
+		"PROPERTY_FIELDS" => array("name","message","phone"),
+		"PROPERTY_FIELDS_REQUIRED" => array(),
+		"PROPS_AUTOCOMPLETE_EMAIL" => array(),
+		"PROPS_AUTOCOMPLETE_NAME" => array(),
+		"PROPS_AUTOCOMPLETE_PERSONAL_PHONE" => array(),
+		"PROPS_AUTOCOMPLETE_VETO" => "N",
+		"RECAPTCHA_THEME" => "light",
+		"RECAPTCHA_VALID_SCORE" => "0.5",
+		"REQUIRED_SECTION" => "N",
+		"SECTION_FIELDS_ENABLE" => "N",
+		"SECTION_MAIL_ALL" => "predgorye02@yandex.ru",
+		"SEND_IMMEDIATE" => "Y",
+		"SEND_MAIL" => "N",
+		"SHOW_LINK_TO_SEND_MORE" => "Y",
+		"SHOW_MESSAGE_LINK" => "Y",
+		"SPEC_CHAR" => "N",
+		"USERMAIL_FROM" => "N",
+		"USER_CONSENT" => "Y",
+		"USER_CONSENT_ID" => "1",
+		"USER_CONSENT_INPUT_LABEL" => "Я согласен на обработку персональных данных",
+		"USER_CONSENT_IS_CHECKED" => "Y",
+		"USER_CONSENT_IS_LOADED" => "N",
+		"USE_CAPTCHA" => "Y",
+		"WIDTH_FORM" => "100%"
+	)
+);?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

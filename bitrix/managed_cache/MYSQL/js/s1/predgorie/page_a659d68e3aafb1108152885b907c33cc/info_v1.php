@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/predgorie/components/altasib/feedback.form/send_question/form_script.js" => "16293718309483",]; ?>
